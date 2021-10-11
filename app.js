@@ -1,8 +1,9 @@
-// import functions and grab DOM elements
+import { renderPirate } from "./render-pirate.js";
+import { pirates } from "./pirates.js";
 
-// initialize global state
+const pirateList = document.getElementById('pirate-list');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+for (let pirate of pirates){
+  const pirateCard = renderPirate(pirate);
+  pirateList.append(pirateCard);
+}
