@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { pirates } from "../pirates.js";
-import { renderPirate } from "../render-pirate.js";
+import { pirates } from '../pirates.js';
+import { renderPirate } from '../render-pirate.js';
 
 const test = QUnit.test;
 
