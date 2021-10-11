@@ -8,7 +8,7 @@ export function renderPirate(pirate){
     const pirateButton = document.createElement('button');
     pirateButton.textContent = 'Add to list!';
 
-    const piratePTag = document.createElement('h3')
+    const piratePTag = document.createElement('h3');
     piratePTag.textContent = pirate.crew;
 
     const pirateBounty = document.createElement('p');
