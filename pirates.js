@@ -34,4 +34,21 @@ export const pirates = [
         crew: 'Heart Pirates',
         role: 'Captain', 
       },
+      
+      {
+        id:'shanks-pirate',
+        name:'Red Haired Shanks',
+        img:'./assets/shanks.jpeg',
+        bounty:'4.05B Berries',
+        crew: 'Red Hair Pirates',
+        role: 'Captain',
+      },
+      {
+      id:'robin-pirate',
+      name:'Nico Robin',
+      img:'./assets/robin.png',
+      bounty:'130M Berries',
+      crew: 'Straw Hat Pirates',
+      role: 'Archaeologist',
+      },
     ];
