@@ -41,4 +41,16 @@ test('Render Law HTML snippet', (expect)=>{
     const lawPirate = pirates[3];
     const actual = renderPirate(lawPirate).outerHTML;
     expect.equal(actual, expected);
-})
+});
+test('Render Shanks HTML snippet', (expect)=>{
+    const expected = `<div class="pirate-card"><h2>Red Haired Shanks</h2><img src="./assets/shanks.jpeg"><button>Add</button><h3>Red Hair Pirates</h3><p>4.05B Berries</p><p2>Captain</p2></div>`;
+    const shanksPirate = pirates[4];
+    const actual = renderPirate(shanksPirate).outerHTML;
+    expect.equal(actual, expected);
+});
+test('Render Robin HTML snippet', (expect)=>{
+    const expected = `<div class="pirate-card"><h2>Nico Robin</h2><img src="./assets/robin.png"><button>Add</button><h3>Straw Hat Pirates</h3><p>130M Berries</p><p2>Archaeologist</p2></div>`;
+    const robinPirate = pirates[5];
+    const actual = renderPirate(robinPirate).outerHTML;
+    expect.equal(actual, expected);
+});

@@ -8,7 +8,7 @@ body {
     background-color: var(--color-1);
     text-align: center;
 }
-h1, h2{
+h1, h2, p, h3, p2{
     font-family:  'Bubblegum Sans', cursive;
     color: var(--color-3);
 }
@@ -33,4 +33,8 @@ h1, h2{
 img{
     width: 150px;
     height: auto;
+}
+button {
+    font-family:  'Bubblegum Sans', cursive;
+    color: var(--color-3);
 }
