@@ -1,5 +1,5 @@
 
-/* adapted from http://meyerweb.com/eric/tools/css/reset/ 
+/* /* adapted from http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -35,4 +35,4 @@ time, mark, audio, video {
 
 ol, ul {
 	list-style: none;
-}
+} 
