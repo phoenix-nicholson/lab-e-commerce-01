@@ -37,4 +37,8 @@ img{
 button {
     font-family:  'Bubblegum Sans', cursive;
     color: var(--color-3);
+    background-color: var(--color-4);
+    border-radius: 15px;
+    
+
 }
