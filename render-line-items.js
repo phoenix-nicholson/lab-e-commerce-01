@@ -7,7 +7,7 @@ export function renderLineItems(cartItem, pirateData){
     const tdQty = document.createElement('td');
     tdQty.textContent = cartItem.qty;
     const tdTotal = document.createElement('td');
-    tdTotal.textContent = cartItem.qty * pirateData.bounty;
+
     tr.append(tdName, tdBounty, tdQty, tdTotal);
     return tr;
 

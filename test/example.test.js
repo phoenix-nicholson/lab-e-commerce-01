@@ -3,6 +3,8 @@
 import { pirates } from '../data/pirates.js';
 import { renderPirate } from '../render-pirate.js';
 import { findById } from '../utils.js';
+import { cart } from '../data/cart-data.js';
+import { renderLineItems } from '../render-line-items.js';
 
 const test = QUnit.test;
 
@@ -73,5 +75,12 @@ test('findById should return the item matching the ID', (expect)=>{
 
     };
     const actual = findById('luffy-pirate', pirates);
+    expect.deepEqual(actual, expected);
+});
+test('render DOM items in shopping cart, HTML snippet', (expect)=>{
+    const expected = `<tr><td>Monkey D. Luffy</td><td>1.5B Berries</td><td>1</td><td></td></tr>`;
+    const cartItem = cart[0];
+    const pirateData = pirates[0];
+    const actual = renderLineItems(cartItem, pirateData).outerHTML;
     expect.deepEqual(actual, expected);
 });
