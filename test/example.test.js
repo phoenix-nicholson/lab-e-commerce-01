@@ -92,7 +92,7 @@ test('addItem should increment the quantity if item in cart', (expect)=>{
     addItem('luffy-pirate');
     const cart = getCart();
     const expected = [
-        { id:'luffy-pirate', qty:1 },
+        { id:'luffy-pirate', qty:2 },
         { id:'zoro-pirate', qty:1 },
     ];
     expect.deepEqual(cart, expected);
@@ -105,3 +105,14 @@ test('addItem should add an item if its not already there', (expect)=>{
     const cart = getCart();
     expect.deepEqual(cart, expected);
 });
+test('OrderButton will clear local storage', (expect)=> {
+    const testCart = [
+        { id: 'luffy-pirate', qty: 1 },
+        { id: ' zoro-pirate', qty: 1 }
+    ];
+    localStorage.setItem('CART', JSON.stringify(testCart));
+    localStorage.removeItem('CART');
+    const expected = [];
+    const actual = getCart();
+    expect.deepEqual(actual, expected);
+}); 

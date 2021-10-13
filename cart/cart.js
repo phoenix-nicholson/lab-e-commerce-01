@@ -17,6 +17,6 @@ tdOrderTotal.textContent = toUSD(orderTotal);
 
 const orderButton = document.getElementById('order-button');
 orderButton.addEventListener('click', ()=> {
-    localStorage.remove('CART');
+    localStorage.removeItem('CART');
     window.location.replace('..');
 });

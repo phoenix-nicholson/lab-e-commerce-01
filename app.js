@@ -12,6 +12,6 @@ const pirateButtons = document.querySelectorAll('.add-button');
 for (let addBtn of pirateButtons){
     addBtn.addEventListener('click', ()=> {
         addItem(addBtn.id);
-        alert('Added item to cart');
+        
     });
 }
