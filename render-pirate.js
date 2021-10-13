@@ -7,6 +7,8 @@ export function renderPirate(pirate){
 
     const pirateButton = document.createElement('button');
     pirateButton.textContent = 'Add to list!';
+    pirateButton.id = pirate.id;
+    pirateButton.classList.add('add-button');
 
     const piratePTag = document.createElement('h3');
     piratePTag.textContent = pirate.crew;
