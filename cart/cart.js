@@ -19,4 +19,10 @@ const orderButton = document.getElementById('order-button');
 orderButton.addEventListener('click', ()=> {
     localStorage.removeItem('CART');
     window.location.replace('..');
+     
 });
+if (cart.length <= 0) {
+    orderButton.disabled = true;
+} else {
+    orderButton.disabled = false;
+}
