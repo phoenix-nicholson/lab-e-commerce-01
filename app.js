@@ -1,5 +1,5 @@
 import { renderPirate } from './render-pirate.js';
-import { pirates } from '../data/pirates.js';
+import { pirates } from './data/pirates.js';
 import { addItem } from './utils.js';
 
 const pirateList = document.getElementById('pirate-list');
