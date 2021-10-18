@@ -40,3 +40,27 @@ export function addItem(id){
     localStorage.setItem('CART', stringCart);
 }
 
+import { pirates } from './data/pirates.js';
+
+export function getProducts(){
+    let lsProducts = localStorage.getItem('PRODUCTS');
+    const products = JSON.parse(lsProducts);
+
+    if (!products){
+        const pirateString = JSON.stringify(pirates);
+        localStorage.setItem('PRODUCTS', pirateString);
+    }
+    return products || pirates;
+}
+
+export function addProduct(newPirate){
+    let products = getProducts();
+    // console.log('PRODUCTS BEFORE', products);
+
+    products.push(newPirate);
+    // console.log('PRODUCTS AFTER', products);
+
+    let productsString = JSON.stringify(products);
+    localStorage.setItem('PRODUCTS', productsString);
+}
+

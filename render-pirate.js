@@ -10,6 +10,11 @@ export function renderPirate(pirate){
     pirateButton.id = pirate.id;
     pirateButton.classList.add('add-button');
 
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove from list';
+    removeButton.id = pirate.id;
+    removeButton.classList.add('remove-btn');
+
     const piratePTag = document.createElement('h3');
     piratePTag.textContent = pirate.crew;
 
@@ -23,6 +28,6 @@ export function renderPirate(pirate){
     img.src = pirate.img;
 
     pirateCard.append(pirateHeader, img, pirateButton, piratePTag,
-        pirateBounty, pirateRole);
+        pirateBounty, pirateRole, removeButton);
     return pirateCard;
 }

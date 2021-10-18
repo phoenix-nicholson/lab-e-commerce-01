@@ -1,9 +1,10 @@
-import { pirates } from '../data/pirates.js';
-import { calculateOrderTotal, findById, getCart, toUSD } from '../utils.js';
+// import { pirates } from '../data/pirates.js';
+import { calculateOrderTotal, findById, getCart, getProducts, toUSD } from '../utils.js';
 import { renderLineItems } from '../render-line-items.js';
 
 const tbody = document.getElementById('table-body');
 const cart = getCart();
+const pirates = getProducts();
 
 for (let cartItem of cart){
     const pirateData = findById(cartItem.id, pirates);
@@ -19,10 +20,11 @@ const orderButton = document.getElementById('order-button');
 orderButton.addEventListener('click', ()=> {
     localStorage.removeItem('CART');
     window.location.replace('..');
-     
+
 });
 if (cart.length <= 0) {
     orderButton.disabled = true;
 } else {
     orderButton.disabled = false;
 }
+
