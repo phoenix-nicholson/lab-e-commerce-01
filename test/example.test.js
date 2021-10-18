@@ -2,7 +2,7 @@
 // import { example } from '../example.js';
 import { pirates } from '../data/pirates.js';
 import { renderPirate } from '../render-pirate.js';
-import { addItem, findById, getCart } from '../utils.js';
+import { addItem, addProduct, findById, getCart, getProducts } from '../utils.js';
 
 
 const test = QUnit.test;
@@ -105,6 +105,7 @@ test('addItem should add an item if its not already there', (expect)=>{
     const cart = getCart();
     expect.deepEqual(cart, expected);
 });
+
 test('OrderButton will clear local storage', (expect)=> {
     const testCart = [
         { id: 'luffy-pirate', qty: 1 },
@@ -116,3 +117,18 @@ test('OrderButton will clear local storage', (expect)=> {
     const actual = getCart();
     expect.deepEqual(actual, expected);
 }); 
+
+test('addProduct should add a products to the products array', (expect)=>{
+    let products = getProducts();
+    const newProduct = {
+        id: 'nami-pirate',
+        name: 'Nami',
+        img: './assets/nami.jpeg',
+        bounty: '66,000,000',
+        crew: 'Straw Hat Pirates',
+        role: 'Navigator',
+    };
+    addProduct(newProduct);
+    products = getProducts();
+    expect.equal(products.length, 7);
+});

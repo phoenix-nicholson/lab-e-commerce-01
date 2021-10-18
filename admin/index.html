@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <title>Admin</title>
+</head>
+<body>
+    <h1>Admin Page</h1>
+    <a href="../">Bounty Board</a>
+    <a href="../cart">Wanted list</a>
+
+    <form id="product-form">
+
+        <label>
+            ID
+            <input type="text" name="id">
+        </label>
+
+        <label>
+            Name
+            <input type="text" name="name">
+        </label>
+
+        <label>
+            Image
+            <input type="text" name="img">
+        </label>
+
+        <label>
+            Bounty
+            <input type="number" name="bounty">
+        </label>
+
+        <label>
+            Crew
+            <input type="text" name="crew">
+        </label>
+
+        <label>
+            Role
+            <input type="text" name="role">
+        </label>
+
+        <button>Add New Pirate!</button>
+
+    </form>
+    <script type="module" src="./add-products.js"></script>
+</body>
+</html>

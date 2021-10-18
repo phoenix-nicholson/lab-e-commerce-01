@@ -23,6 +23,6 @@ export function renderPirate(pirate){
     img.src = pirate.img;
 
     pirateCard.append(pirateHeader, img, pirateButton, piratePTag,
-        pirateBounty, pirateRole);
+        pirateBounty, pirateRole,);
     return pirateCard;
 }
